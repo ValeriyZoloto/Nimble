@@ -1,11 +1,12 @@
 /*::::::::::::::::::::::::::цвета:::::::::::::::::::::::::::::::::::::::::::::::*/
-// $accent:#fe3e57;
+$accent:#b4f299;
+$accent-dark:rgba(180, 242, 153, 0.5);
 // $default:#8d8d8d;
 // $title:#29282d;
-// $white: #ffffff;
-// $bg:#f6f6f6;
-// $yellow: #ffb534;
-// $blue: #34c3ff;
+$white: #ffffff;
+$bg:#05030e;
+$yellow: #ffb534;
+$gray: #8fa2a6;
 /*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::переменные::::::::::::::::::::::::::::::::::::::::::*/
 $row: 1;
@@ -44,7 +45,7 @@ $row-10:10;
 
 /*::::::::::::::::::::::::::обои-finish:::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::брекпоинты::::::::::::::::::::::::::::::::::::::::::*/
-$xl: 1230px;
+$xl: 1410px;
 $lg: 1200px;
 $mdb: 1100px;
 $md: 1050px;
@@ -106,21 +107,24 @@ $xxs: 375px;
 
 /*::::::::::::::::::::::::::наследование для шрифтов-finish:::::::::::::::::::::*/
 /*::::::::::::::::::::::::::наследование для кнопки:::::::::::::::::::::::::::::*/
-// %btn {
-//   padding: 12px 26px;
-//   background-color: $accent;
-//   color: $white;
-//   text-transform: uppercase;
-//   @extend %roboto-400;
-//   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
-// }
+%btn {
+  position: relative;
+  padding: 10px 5px;
+  background: linear-gradient(180deg, #e2f685 0%, #8af9ad 100%);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  @extend %Montserrat-600;
+  color: $bg;
+  transition: 0.5s;
+}
 
-// %btn-hover {
-//   background-color: #fff;
-//   color: #29282d;
-//   border: 1px solid #fe3e57;
-//   box-shadow: 20px 7px 20px 0px rgba(255, 17, 48, 0.3);
-// }
+%btn-hover {
+  background: $bg;
+  color: $white;
+  background-image: url(../images/menu/button.png);
+  background-size: 102% 102%;
+  background-repeat: no-repeat;
+}
 
 // %checkbox-hiden {
 //   width: 1px;

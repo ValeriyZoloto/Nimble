@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marcho</title>
+  <title>Nimble token</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,67 @@
 
 <body>
   <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="logo">
+          <a class="logo__link" href="#">
+            <picture class="logo__picture">
+              <source srcset="images/logo/logo.webp" type="image/webp">
+              <source srcset="img.jpg" type="images/logo/logo.png">
+              <img class="logo__img" src="images/logo/logo.webp" alt="logo">
+            </picture>
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                О токене
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Партнёрка
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Токенсейл
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Bounty
+              </a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#">
+                Kibotrons
+              </a>
+            </li>
+          </ul>
+
+          <div class="header__buttons">
+            <button class="btn header__btn" type="button">Регистрация</button>
+            <button class="header__button" type="button">Войти</button>
+            <button class="header__mobile-button" type="button">
+              <svg class="header__svg">
+                <use xlink:href="images/sprite.svg#entry-btn"></use>
+              </svg>
+            </button>
+            <button class="header__menu-open" type="button">
+              <svg class="header__svg-menu">
+                <use xlink:href="images/sprite.svg#mob-menu-btn"></use>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <main class="main">

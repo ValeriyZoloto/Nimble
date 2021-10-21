@@ -7,22 +7,15 @@ body {
 }
 
 body {
-  // color: $default;
-  // font-size: 16px;
-  // line-height: 1.6;
+  color: $white;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
   overflow-y: scroll;
-  // @extend %quicksand-500;
-}
-
-a {
-  // color: $default;
-  // font-size: 16px;
-  // line-height: 1.6;
-  // @extend %quicksand-500;
+  background-color: $bg;
+  @extend %Montserrat-500;
 }
 
 .main {
@@ -30,9 +23,9 @@ a {
 }
 
 .container {
-  // max-width: 1200px;
-  // padding: 0 15px;
-  // margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .sr-only {
@@ -48,19 +41,123 @@ a {
   overflow: hidden;
 }
 
-.title {
-  // text-align: center;
-  // @extend %roboto-700;
-  // font-size: 48px;
-  // line-height: 1.35;
-  // color: $title;
-  // text-transform: uppercase;
+.menu {
+  margin-top: -8px;
+  max-width: 616px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @extend %Montserrat-600;
+  font-size: 16px;
+  line-height: 1.25;
 
-  // @include media-w($sms) {
-  //   font-size: 40px;
-  // }
+  @include media-w($mdl) {
+    position: absolute;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #8b28c4;
+    transform: translateY(-200%);
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    padding: 100px 0;
+    transition: transform 0.5s;
+    z-index: 2;
+    height: 100vh;
+    overflow: scroll;
+  }
 
-  // @include media-w($xxs) {
-  //   font-size: 32px;
-  // }
+  &__item:not(:last-child) {
+    margin-right: 47px;
+
+    @include media-w($mdl) {
+      margin: 0px 0px 30px 0px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:first-child {
+      position: relative;
+      padding-right: 16px;
+      margin-right: 40px;
+
+      @include media-w($mdl) {
+        margin-right: 0;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 8px;
+        width: 7px;
+        height: 7px;
+        background-image: url(../images/menu/polygon.png);
+        @extend %bg-center-cover;
+      }
+    }
+  }
+
+  &__link {
+    padding: 3px 3px;
+    width: 100%;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $accent;
+      transition: width 0.5s;
+    }
+
+    &:hover::after,
+    :focus::after {
+      width: 100%;
+    }
+  }
+}
+
+.menu--active {
+  @include media-w($mdl) {
+    position: absolute;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #8b28c4;
+    transform: translateY(0%);
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    padding: 100px 0;
+    transition: transform 0.5s;
+    z-index: 2;
+    height: 100vh;
+    overflow: scroll;
+  }
+}
+
+.btn {
+  @extend %btn;
+
+  &:hover {
+    @extend %btn-hover;
+  }
+}
+
+.logo {
+  margin-left: -50px;
 }
