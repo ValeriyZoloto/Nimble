@@ -1,7 +1,7 @@
 /*::::::::::::::::::::::::::цвета:::::::::::::::::::::::::::::::::::::::::::::::*/
 $accent:#b4f299;
 $accent-dark:rgba(180, 242, 153, 0.5);
-// $default:#8d8d8d;
+$blur:rgba(38, 171, 91, 0.4);
 // $title:#29282d;
 $white: #ffffff;
 $bg:#05030e;
@@ -56,7 +56,8 @@ $smz: 700px;
 $sms: 620px;
 $smm: 500px;
 $xs: 450px;
-$xxs: 375px;
+$xxs: 400px;
+$xxsl: 330px;
 
 /*::::::::::::::::::::::::::брекпоинты-finish:::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::миксин для брейкпоинтов:::::::::::::::::::::::::::::*/
@@ -124,6 +125,10 @@ $xxs: 375px;
   background-image: url(../images/menu/button.png);
   background-size: 102% 102%;
   background-repeat: no-repeat;
+}
+
+%btn-focus {
+  box-shadow: 10px 7px 10px 0px $accent;
 }
 
 // %checkbox-hiden {

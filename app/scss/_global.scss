@@ -58,7 +58,7 @@ body {
     left: 0;
     right: 0;
     top: 0;
-    background-color: #8b28c4;
+    background-color: $bg;
     transform: translateY(-200%);
     display: block;
     font-size: 24px;
@@ -137,7 +137,8 @@ body {
     left: 0;
     right: 0;
     top: 0;
-    background-color: #8b28c4;
+    // background-color: $bg;
+    background: $blur;
     transform: translateY(0%);
     display: block;
     font-size: 24px;
@@ -153,9 +154,14 @@ body {
 .btn {
   @extend %btn;
 
+  &:focus {
+    @extend %btn-focus;
+  }
+
   &:hover {
     @extend %btn-hover;
   }
+
 }
 
 .logo {

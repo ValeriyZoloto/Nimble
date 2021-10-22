@@ -1,1 +1,246 @@
-.footer {}
+.footer {
+  position: relative;
+  padding: 50px 0px 195px;
+
+
+  &__socials {
+    max-width: 567px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-w($sms) {
+      position: relative;
+      max-width: 436px;
+      flex-wrap: wrap;
+    }
+
+    @include media-w($xs) {
+      max-width: 380px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 22px;
+    width: 120px;
+    height: 119px;
+
+    &--group {
+      @include media-w($sms) {
+        position: absolute;
+        top: -4px;
+        left: 91px;
+      }
+
+      @include media-w($xs) {
+        top: -3px;
+        left: 57px;
+      }
+
+      @include media-w($xxs) {
+        left: 22px;
+      }
+    }
+
+    &--channel {
+      margin: 0px 0px 0px 31px;
+
+      @include media-w($sms) {
+        margin: 0px 0px 0px 0px;
+        position: absolute;
+        top: -4px;
+        right: 106px;
+      }
+
+      @include media-w($xs) {
+        top: -4px;
+        right: 73px;
+      }
+
+      @include media-w($xxs) {
+        right: 15px;
+      }
+    }
+
+    &--youtube {
+      margin: 7px 0px 0px 47px;
+
+      @include media-w($sms) {
+        margin: 0px 0px 0px 0px;
+        position: absolute;
+        bottom: -250px;
+        left: 50px;
+      }
+
+      @include media-w($xs) {
+        bottom: -250px;
+        left: 11px;
+      }
+
+      @include media-w($xxs) {
+        left: -15px;
+      }
+    }
+
+    &--twitter {
+      margin: 0px 0px 0px 28px;
+
+      @include media-w($sms) {
+        margin: 0px 0px 0px 0px;
+        position: absolute;
+        bottom: -246px;
+        left: 167px;
+      }
+
+      @include media-w($xs) {
+        bottom: -246px;
+        left: 36%;
+      }
+
+      @include media-w($xxs) {
+        left: 34%;
+      }
+
+      @include media-w($xxsl) {
+        left: 30%;
+      }
+    }
+
+    &--medium {
+      margin: 0px 0px 0px 21px;
+
+      @include media-w($sms) {
+        margin: 0px 0px 0px 0px;
+        position: absolute;
+        bottom: -248px;
+        right: 35px;
+      }
+
+      @include media-w($xs) {
+        bottom: -246px;
+        right: 10px;
+      }
+
+      @include media-w($xxs) {
+        right: -12px;
+      }
+    }
+  }
+
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 120px;
+    height: 119px;
+    border-radius: 20px;
+    opacity: 0.5;
+    transition: 0.5s;
+
+    &:focus {
+      box-shadow: 10px 7px 10px 0px $accent;
+    }
+
+    &:hover {
+      width: 121px;
+      height: 119px;
+      opacity: 1;
+      background-image: url(../images/socials/border.png);
+      @extend %bg-center-contain;
+
+      & .footer__span {
+        background: linear-gradient(105.56deg, #fff 18.43%, #fff 89.58%, #fff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $white;
+      }
+    }
+
+    &:active {
+      box-shadow: 10px 7px 10px 0px $accent;
+
+      & .footer__span {
+        background: linear-gradient(105.56deg, #fff 18.43%, #fff 89.58%, #fff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $white;
+      }
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    display: block;
+
+    @include media-w($xxs) {
+      top: 0px;
+      left: 4px;
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  &__span {
+    @extend %Montserrat-700;
+    font-size: 14px;
+    font-weight: 1.43;
+    text-transform: uppercase;
+    background: linear-gradient(105.56deg, #E2F685 18.43%, #8AF9AD 89.58%, #8AF9AD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #8AF9AD;
+    text-shadow: 0px 24px 64px rgba(138, 249, 173, 0.3);
+    display: block;
+    position: absolute;
+    top: 73px;
+    right: 31px;
+
+    @include media-w($xs) {
+      font-size: 12px;
+    }
+
+    .footer__span:hover {
+      color: $white;
+    }
+
+    &--channel {
+      top: 73px;
+      right: 17px;
+    }
+
+    &--youtube {
+      top: 70px;
+      right: 22px;
+    }
+
+    &--twitter {
+      top: 73px;
+      right: 26px;
+    }
+
+    &--medium {
+      top: 73px;
+      right: 20px;
+    }
+  }
+
+  &__blur {
+    position: absolute;
+    width: 848px;
+    height: 195px;
+    bottom: 0px;
+    right: 48px;
+    background: rgba(162, 220, 137, 0.4);
+    filter: blur(430px);
+  }
+}
+
+.footer__span:hover {
+  color: $white;
+}

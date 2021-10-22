@@ -2,6 +2,10 @@
   position: relative;
   padding: 76px 0;
 
+  @include media-w($smm) {
+    padding: 12px 0;
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -18,6 +22,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($smm) {
+      max-width: 393px;
+    }
   }
 
   &__nav {
@@ -76,6 +84,10 @@
       color: $bg;
     }
 
+    &:focus {
+      @extend %btn-focus;
+    }
+
   }
 
   &__mobile-button {
@@ -91,6 +103,10 @@
       display: block;
     }
 
+    @include media-w($smm) {
+      margin-right: 15px;
+    }
+
     &:hover {
       border: 2px solid $accent;
     }
@@ -99,6 +115,12 @@
   &__svg {
     width: 28px;
     height: 26px;
+    fill: #B4F299;
+    transition: fill 0.5s;
+
+    &:hover {
+      fill: rgba(187, 195, 35, 1);
+    }
   }
 
   &__menu-open {
