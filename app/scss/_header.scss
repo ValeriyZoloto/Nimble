@@ -1,6 +1,7 @@
 .header {
   position: relative;
   padding: 76px 0;
+  z-index: 1;
 
   @include media-w($smm) {
     padding: 12px 0;

@@ -1,0 +1,222 @@
+.revolution {
+  position: relative;
+  padding: 173px 0px 0px 0px;
+
+  &__aside {
+    position: absolute;
+    left: -113px;
+    top: 204px;
+    transform: rotate(-90deg);
+    width: 331px;
+    z-index: 1;
+
+    @include media-w($xl) {
+      display: none;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__link {
+    padding: 15px 5px;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $gray;
+    transition: 0.5s;
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    &:focus {
+      border: 1px solid $accent;
+    }
+
+    &:hover {
+      color: $accent;
+      position: absolute;
+      transform: rotate(90deg);
+    }
+
+    &:active {
+      box-shadow: 10px 7px 10px 0px $accent;
+    }
+
+    &--one {
+      position: absolute;
+      top: -20px;
+      left: -6px;
+    }
+
+    &--two {
+      position: absolute;
+      top: -21px;
+      left: 125px;
+    }
+
+    &--three {
+      position: absolute;
+      top: -20px;
+      left: 256px;
+    }
+  }
+
+  &__inner {
+    margin: -418px 0px 0px 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-w($xl) {
+      flex-direction: column-reverse;
+    }
+
+    @include media-w($sms) {
+      margin: -331px 0px 0px -9px;
+    }
+  }
+
+  &__content {
+    margin-top: -112px;
+    z-index: 4;
+
+    @include media-w($sms) {
+      margin-top: -74px;
+    }
+  }
+
+  &__title {
+    max-width: 549px;
+    max-width: 100%;
+    @extend %Montserrat-800;
+    font-size: 48px;
+    line-height: 1.22;
+    color: $accent;
+    margin-bottom: 25px;
+
+    @include media-w($xl) {
+      max-width: 549px;
+    }
+
+    @include media-w($sms) {
+      font-size: 31px;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $gray;
+    margin-bottom: 36px;
+
+    @include media-w($sms) {
+      max-width: 232px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__btn {
+    width: 213px;
+    height: 62px;
+    border-radius: 17px
+  }
+
+  &__representation {
+    padding-top: 112px;
+    position: relative;
+    margin-left: -74px;
+    position: relative;
+    width: 1110px;
+    height: 999px;
+
+    @include media-w($xl) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__img {
+    z-index: -1;
+    margin: -88px 0px 0px -2px;
+    max-width: 133%;
+    object-fit: cover;
+
+    @include media-w($xl) {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+
+    @include media-w($sms) {
+      margin: -108px 0px 0px 15px;
+    }
+
+  }
+
+  &__blur {
+    position: absolute;
+    width: 123px;
+    height: 123px;
+    left: 189px;
+    top: 476px;
+    background: #A2DC89;
+    filter: blur(110px);
+    z-index: 2;
+
+    @include media-w($sms) {
+      left: 251px;
+      top: 165px;
+      width: 74px;
+      height: 74px;
+      background: #A2DC89;
+      filter: blur(110px);
+    }
+
+
+
+    &--one {
+      position: absolute;
+      width: 73px;
+      height: 73px;
+      left: 135px;
+      top: 585px;
+      background: #A2DC89;
+      filter: blur(110px);
+    }
+  }
+
+  &__down {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    position: absolute;
+    left: 109px;
+    bottom: 167px;
+    transition: 0.5s;
+    z-index: 20;
+
+    @include media-w($xl) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include media-w($sms) {
+      display: none;
+    }
+
+    &:focus {
+      box-shadow: 10px 7px 10px 0px $accent;
+    }
+
+    &:hover {
+      border: 2px solid $accent;
+    }
+  }
+
+  &__down-img {}
+}
