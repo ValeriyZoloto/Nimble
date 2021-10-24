@@ -40,6 +40,7 @@
       color: $accent;
       position: absolute;
       transform: rotate(90deg);
+      font-weight: 700;
     }
 
     &:active {
@@ -218,5 +219,110 @@
     }
   }
 
-  &__down-img {}
+  &__cards {
+    display: flex;
+    max-width: 1297px;
+    margin: -7px auto 0px;
+    justify-content: space-between;
+  }
+
+  &__card {}
+
+  &__card-link {
+    padding: 48px 84px 52px 46px;
+    position: relative;
+    display: block;
+    width: 292px;
+    height: 259px;
+    border-radius: 20px;
+    transition: 0.5s;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 292px;
+      height: 259px;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      background-image: url(../images/revolution/card-border.png);
+      @extend %bg-center-cover;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: -52px;
+      right: -27px;
+      left: -74px;
+      bottom: -14px;
+      background-image: url(../images/revolution/card-border-hover.png);
+      display: none;
+    }
+
+    &:hover {
+      margin-top: -30px;
+      width: 314px;
+      height: 279px;
+      background: rgba(5, 4, 14, 0.4);
+      box-shadow: 0px 34px 74px rgba(162, 220, 137, 0.2);
+      border-radius: 20px;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: block;
+      }
+
+      & .revolution__card-span {
+        color: $hover-span;
+      }
+
+      & .revolution__card-square {
+        background: linear-gradient(139.33deg, #BBC423 -14.59%, #E99A3D 99.86%);
+        box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
+      }
+
+      & .revolution__card-svg path {
+        fill: $white;
+      }
+    }
+  }
+
+  &__card-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 55px;
+  }
+
+  &__card-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+    border: 1px solid $green;
+    border-radius: 10px;
+    background-color: $bg;
+  }
+
+  &__card-span {
+    display: block;
+    @extend %Montserrat-700;
+    font-size: 16px;
+    line-height: 1.43;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &__card-content {
+    font-size: 14px;
+    line-height: 1.64;
+    color: $white;
+    width: 161px;
+  }
 }
