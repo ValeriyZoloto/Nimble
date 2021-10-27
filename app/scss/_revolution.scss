@@ -92,7 +92,7 @@
 
     @include media-w($sms) {
       margin: -74px 0px 109px 0px;
-
+      z-index: 1;
     }
   }
 
@@ -104,6 +104,11 @@
     line-height: 1.22;
     color: $accent;
     margin-bottom: 25px;
+    transition: margin 0.5s;
+
+    &--active {
+      margin-top: 250px;
+    }
 
     @include media-w($xl) {
       max-width: 549px;
@@ -380,37 +385,37 @@
     color: $white;
     width: 161px;
   }
-}
 
-.slick-slider .slick-list {
-  padding-top: 45px;
-}
+  .slick-slider .slick-list {
+    padding-top: 45px;
+  }
 
-.slick-next {
-  position: absolute;
-  background-color: transparent;
-  border: transparent;
-  bottom: 68px;
-  left: 106px;
+  .slick-next {
+    position: absolute;
+    background-color: transparent;
+    border: transparent;
+    bottom: 68px;
+    left: 106px;
 
-  svg {
-    display: none;
+    svg {
+      display: none;
 
-    @include media-w($sms) {
-      display: block;
+      @include media-w($sms) {
+        display: block;
+      }
     }
   }
-}
 
-.slick-prev {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+  .slick-prev {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }

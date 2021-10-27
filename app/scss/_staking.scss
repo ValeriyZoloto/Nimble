@@ -1,0 +1,434 @@
+.staking {
+
+  @include media-w($smm) {
+    margin-top: -144px;
+  }
+
+  &__inner {
+    max-width: 1055px;
+    margin: 0 auto;
+
+    @include media-w($smm) {
+      margin: 0px 0px 0px -8px;
+    }
+  }
+
+  &__up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 771px;
+    margin-bottom: 62px;
+
+    @include media-w($smm) {
+      max-width: 358px;
+      margin-bottom: 31px;
+    }
+  }
+
+  &__title {
+    @extend %Montserrat-800;
+    font-size: 34px;
+    line-height: 1.2;
+    color: $accent;
+
+    @include media-w($mdb) {
+      max-width: 192px;
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &__income {
+    position: relative;
+    display: block;
+    color: rgba(180, 242, 153);
+    opacity: 0.5;
+    padding: 10px 31px 10px 0px;
+    @extend %Montserrat-700;
+    font-size: 24px;
+    transition: 0.5s;
+
+    @include media-w($mdb) {
+      max-width: 132px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include media-w($smm) {
+      margin: 2px 2px 0px 0px;
+    }
+
+    &:focus {
+      padding: 10px 35px 10px 10px;
+      border-radius: 20px;
+      box-shadow: 10px 7px 10px 0px $accent;
+
+      &::after {
+        transform: rotate(-180deg);
+        top: 42%;
+        right: 10px;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+
+      &::after {
+        transform: rotate(-180deg);
+        top: 42%;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(../images/staking/polygon.png);
+      @extend %bg-center-cover;
+      transition: 0.5s;
+    }
+  }
+
+  &__acceleration {
+    margin: 0px 0px 0px 58px;
+    max-width: 146px;
+    @extend %Montserrat-600;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    @include media-w($mdl) {
+      margin: 0px 0px 0px 0px;
+    }
+  }
+
+  &__without {
+    position: relative;
+    display: block;
+    color: $yellow-dark;
+    padding: 0px 0px 0px 30px;
+    margin-bottom: 14px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(139.33deg, #BBC423 -14.59%, #E99A3D 99.86%);
+      box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
+    }
+  }
+
+  &__with {
+    position: relative;
+    display: block;
+    color: $accent-light;
+    padding: 0px 0px 0px 30px;
+    margin-bottom: 15px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(105.56deg, #E2F685 18.43%, #8AF9AD 89.58%);
+    }
+  }
+
+  &__slider {
+    max-width: 940px;
+    display: flex;
+    align-items: flex-end;
+    margin: 0px 0px 18px 60px;
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+
+    &--one {
+      width: 100%;
+      max-width: 100%;
+      height: 291px;
+      margin-right: 44px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -53px;
+        left: -107px;
+        width: 319px;
+        height: 371px;
+        background-image: url("../images/staking/procent9.png");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--two {
+      margin-right: 39px;
+      width: 100%;
+      max-width: 100%;
+      height: 291px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -51px;
+        left: -94px;
+        width: 319px;
+        height: 371px;
+        background-image: url("../images/staking/procent12.png");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--three {
+      margin-right: 39px;
+      width: 100%;
+      max-width: 100%;
+      height: 291px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -51px;
+        left: -83px;
+        width: 319px;
+        height: 371px;
+        background-image: url("../images/staking/procent15.png");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--four {
+      margin: -15px 45px 0px 0px;
+      width: 100%;
+      max-width: 100%;
+      height: 316px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -62px;
+        left: -74px;
+        width: 319px;
+        height: 396px;
+        background-image: url("../images/staking/procent18.png");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--five {
+      margin: -57px 39px 0px 0px;
+      width: 100%;
+      max-width: 100%;
+      height: 386px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -89px;
+        left: -57px;
+        width: 319px;
+        height: 466px;
+        background-image: url("../images/staking/procent22.png");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__num {
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 2.28;
+
+    &--one {
+      position: absolute;
+      bottom: 32px;
+      left: 25px;
+    }
+
+    &--two {
+      position: absolute;
+      bottom: 32px;
+      left: 22px;
+    }
+
+    &--three {
+      position: absolute;
+      bottom: 32px;
+      left: 21px;
+    }
+
+    &--four {
+      position: absolute;
+      bottom: 42px;
+      left: 29px;
+    }
+
+    &--five {
+      position: absolute;
+      bottom: 70px;
+      left: 35px;
+    }
+  }
+
+  &__content {
+    min-height: 213px;
+
+    @include media-w($smm) {
+      max-width: 384px;
+      margin-top: 38px;
+    }
+  }
+
+  &__text {
+    line-height: 1.5;
+    color: $gray;
+    transition: margin 0.7s;
+
+    &--one {
+      margin-bottom: 25px;
+    }
+
+    &--two {
+      margin-bottom: 24px;
+    }
+
+    &--three {
+      margin-bottom: 24px;
+    }
+
+    &--hidden {
+      @include media-w($sxla) {
+        margin-left: -2004px;
+      }
+    }
+
+    &--active {
+      margin-left: 0px;
+    }
+  }
+
+  .slick-slider .slick-list {
+    padding-top: 142px;
+    margin-top: -86px;
+  }
+
+  .slick-next {
+    position: absolute;
+    background-color: transparent;
+    border: transparent;
+    bottom: 0px;
+    left: 48%;
+
+    @include media-w($smm) {
+      bottom: 16px;
+      left: 37%;
+    }
+  }
+
+  .slick-prev {
+    position: absolute;
+    background-color: transparent;
+    border: transparent;
+    bottom: 0px;
+    left: 39%;
+    z-index: 9;
+
+    @include media-w($smm) {
+      left: 20%;
+      bottom: 16px;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 10px;
+    position: relative;
+    display: none;
+
+    @include media-w($sxla) {
+      display: block;
+      background-color: transparent;
+      color: #B4F299;
+      border: none;
+      padding-right: 18px;
+
+      &--hidden {
+        display: none;
+      }
+
+      &--in {
+        display: none;
+      }
+    }
+
+    @include media-w($smx) {
+      margin: 0px 0px 0px -6px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: -6px;
+      top: 8px;
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/token/aplication/polygon.png);
+      @extend %bg-center-contain;
+      transform: rotate(-31deg);
+    }
+  }
+
+  &__botton {
+    margin-bottom: 10px;
+    position: relative;
+    display: none;
+
+    @include media-w($sxla) {
+      background-color: transparent;
+      color: #B4F299;
+      border: none;
+      padding-right: 18px;
+
+      &--open {
+        display: block;
+      }
+
+      &--in {
+        display: none;
+      }
+    }
+
+    @include media-w($smx) {
+      margin: 0px 0px 0px -6px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: -16px;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/token/aplication/polygon.png);
+      transform: rotate(-90deg);
+      @extend %bg-center-contain;
+    }
+  }
+}

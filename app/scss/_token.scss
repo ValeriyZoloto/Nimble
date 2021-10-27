@@ -1,53 +1,295 @@
 .token {
-  padding: 131px 0px 147px 0px;
-  background-image: url(../images/token/aplication-frame.png);
-  background-repeat: no-repeat;
-  background-position: bottom -410px right -135px;
-  // background-size: 848px 848px;
+  padding: 131px 0px 145px 0px;
+
+  @include media-w($smx) {
+    padding: 7px 0px 147px 0px;
+  }
 
   &__inner {
     padding: 0px 128px 0px 0px;
     max-width: 1510px;
-    margin: 0 auto 149px;
+    margin: 0 auto 124px;
     display: flex;
+
+    @include media-w($sxla) {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0px 0px 0px 0px;
+    }
+
+    @include media-w($smx) {
+      padding: 0px 80px 0px 11px;
+      margin: 0px;
+    }
   }
 
   &__img {
-    margin: 0pc 191px 0px 26px;
+    margin: 0px 191px 0px 26px;
+
+    @include media-w($smx) {
+      margin: 34px 0px 0px -9px;
+      width: 425px;
+      height: 364px;
+    }
+
+    @include media-w($smm) {
+      margin: -94px 0px 0px -9px;
+    }
+
+    @include media-w($xs) {
+      width: 306px;
+      height: 219px;
+    }
+
   }
 
   &__content {
     margin-top: 58px;
     max-width: 787px;
 
+    @include media-w($sxl) {
+      min-height: 416px;
+      max-width: 725px;
+    }
   }
 
   &__title {
     margin-bottom: 54px;
     font-size: 24px;
     line-height: 1;
+
+    @include media-w($smx) {
+      font-size: 26px;
+      margin-bottom: 51px;
+    }
   }
 
   &__text {
     color: $gray;
     line-height: 1.5;
+    margin-bottom: 23px;
+    transition: margin 0.7s;
+
+    @include media-w($smx) {
+      margin-bottom: 19px;
+    }
+
+    &--hidden {
+      @include media-w($sxla) {
+        margin-left: -2004px;
+      }
+    }
+
+    &--active {
+      margin-left: 0px;
+    }
   }
 
-  &__text-margin {
-    margin-bottom: 23px;
+  &__btn {
+    margin-bottom: 10px;
+    position: relative;
+    display: none;
+
+    @include media-w($sxla) {
+      display: block;
+      background-color: transparent;
+      color: #B4F299;
+      border: none;
+      padding-right: 18px;
+
+      &--hidden {
+        display: none;
+      }
+
+      &--in {
+        display: none;
+      }
+    }
+
+    @include media-w($smx) {
+      margin: 0px 0px 0px -6px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: -6px;
+      top: 8px;
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/token/aplication/polygon.png);
+      @extend %bg-center-contain;
+      transform: rotate(-31deg);
+    }
+  }
+
+  &__botton {
+    margin-bottom: 10px;
+    position: relative;
+    display: none;
+
+    @include media-w($sxla) {
+      background-color: transparent;
+      color: #B4F299;
+      border: none;
+      padding-right: 18px;
+
+      &--open {
+        display: block;
+      }
+
+      &--in {
+        display: none;
+      }
+    }
+
+    @include media-w($smx) {
+      margin: 0px 0px 0px -6px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: -16px;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/token/aplication/polygon.png);
+      transform: rotate(-90deg);
+      @extend %bg-center-contain;
+    }
   }
 
   &__application {
+    display: flex;
+    align-items: center;
+    position: relative;
     padding-top: 37px;
     width: 1370px;
-    height: 613px;
-    border-radius: 20px;
+    height: 576px;
     margin: 0 auto;
+    background-image: url(../images/token/aplication/border.png);
+    background-repeat: no-repeat;
+    background-position: 29px 9px;
+    background-size: contain;
+
+    @include media-w($sxla) {
+      flex-direction: column;
+      align-items: center;
+      background-image: none;
+      width: 100%;
+      height: auto;
+    }
 
   }
 
   &__application-content {
-    margin: 88px 0px 0px 158px;
+    margin: 38px 0px 0px 161px;
+
+    @include media-w($sxla) {
+      margin: 0px 0px 0px 0px;
+    }
+
+    @include media-w($smx) {
+      margin: -14px 0px 0px 0px;
+    }
+  }
+
+  &__application-image {
+    position: relative;
+    width: 478px;
+    height: 451px;
+
+    @include media-w($sxla) {
+      width: 100%;
+      height: auto;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1615px;
+      height: 1708px;
+      top: -620px;
+      left: -612px;
+      background-image: url(../images/token/aplication/aplication-img.png);
+      background-repeat: no-repeat;
+
+      @include media-w($sxla) {
+        height: 1708px;
+        top: -1023px;
+        left: 42%;
+        transform: translateX(-50%);
+      }
+
+      @include media-w($sm) {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 480px;
+      height: 1415px;
+      top: -417px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url(../images/token/aplication/aplication-img-mob.png);
+      background-repeat: no-repeat;
+      display: none;
+
+      @include media-w($smz) {
+        display: block;
+        top: -846px;
+        left: 42%;
+      }
+
+    }
+  }
+
+  &__application-img {
+    display: none;
+
+    @include media-w($sxla) {
+      margin: -304px 0px 0px 0px;
+      display: none;
+    }
+
+    @include media-w($mdb) {
+      margin: -264px 0px 0px 0px;
+    }
+
+    @include media-w($mdl) {
+      margin: -226px 0px 0px 0px;
+    }
+
+    @include media-w($sm) {
+      display: block;
+      margin: -201px 0px 0px 0px;
+    }
+
+    @include media-w($smx) {
+      margin: -201px 0px 0px 0px;
+
+    }
+
+    @include media-w($smz) {
+      display: none;
+      margin: -188px 0px 0px 0px;
+    }
+
+    @include media-w($sms) {
+      margin: -177px 0px 0px 0px;
+    }
+
+    @include media-w($smm) {
+      display: none;
+    }
   }
 
   &__application-title {
@@ -59,10 +301,39 @@
     line-height: 1;
     text-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
     margin-bottom: 60px;
+
+    @include media-w($sxla) {
+      font-size: 26px;
+      margin-bottom: 46px;
+    }
+
+    @include media-w($smx) {
+      margin-bottom: 60px;
+      margin-left: -41px;
+    }
+
+    @include media-w($xss) {
+      margin-left: 0;
+    }
   }
 
   &__list {
-    // margin-left: 207px;
+    @include media-w($sxla) {
+      margin-bottom: 641px;
+    }
+
+    @include media-w($mdb) {
+      margin-bottom: 641px;
+    }
+
+    @include media-w($sm) {
+      margin-bottom: 0px;
+    }
+
+    @include media-w($smz) {
+      margin-bottom: 441px;
+    }
+
   }
 
   &__item {
@@ -71,6 +342,19 @@
     padding-left: 46px;
     @extend %Montserrat-700;
     margin-bottom: 30px;
+
+    @include media-w($sxla) {
+      max-width: 100%;
+    }
+
+    @include media-w($smx) {
+      max-width: 415px;
+      margin-left: -41px;
+    }
+
+    @include media-w($xss) {
+      margin-left: 0;
+    }
 
     &::before {
       position: absolute;
