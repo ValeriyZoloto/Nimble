@@ -332,6 +332,7 @@
     border: transparent;
     bottom: 0px;
     left: 48%;
+    z-index: 9;
 
     @include media-w($smm) {
       bottom: 16px;
