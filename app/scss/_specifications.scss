@@ -293,6 +293,10 @@
     padding: 166px 0px 0px 0px;
     text-align: center;
 
+    @include media-w($smx) {
+      padding: 84px 0px 0px 0px;
+    }
+
     &::before {
       position: absolute;
       content: '';
@@ -310,13 +314,34 @@
     font-size: 34px;
     line-height: 1.2;
     color: $accent;
-    margin-bottom: 45px;
+    margin-bottom: -2px;
+    margin-left: -75px;
+
+    @include media-w($xl) {
+      margin-left: 0px;
+    }
+
+    @include media-w($smx) {
+      margin-left: -310px;
+      font-size: 26px;
+    }
+
+    @include media-w($xss) {
+      margin-left: 0px;
+      text-align: left;
+    }
   }
 
   &__wrap {
     max-width: 1370px;
     display: flex;
     justify-content: space-between;
+
+    @include media-w($xl) {
+      flex-direction: column;
+      align-items: center;
+
+    }
   }
 
   &__sliders {
@@ -326,6 +351,11 @@
 
   &__conditions {
     max-width: 372px;
+
+    @include media-w($smx) {
+      margin-right: auto;
+      margin-left: 9px;
+    }
   }
 
   &__slider {
@@ -333,10 +363,32 @@
     height: 272px;
 
     &--upper {
-      margin-bottom: 20px;
+      margin-bottom: -50px;
+
+      @include media-w($xl) {
+        margin-bottom: 96px;
+      }
+
+      @include media-w($mdl) {
+        margin-bottom: 20px;
+        margin-left: 54px;
+      }
+
+      @include media-w($sm) {
+        margin-left: 119px;
+      }
+
+      @include media-w($smx) {
+        max-width: 467px;
+        margin: 26px 0px 33px 0px;
+      }
     }
 
-    &--bottom {}
+    &--bottom {
+      @include media-w($xl) {
+        display: none;
+      }
+    }
   }
 
   &__slider-item {
@@ -360,27 +412,65 @@
       position: absolute;
       content: '';
       width: 176px;
-      height: 207px;
+      height: 208px;
       top: 0;
-      left: 0;
+      left: 0px;
       background-image: url(../images/specifications/cards/card-border.png);
       @extend %bg-center-cover;
       z-index: -1;
     }
 
+    &::after {
+      position: absolute;
+      content: '';
+      width: 308px;
+      height: 354px;
+      top: -41px;
+      left: -73px;
+      background-image: url(../images/specifications/cards/card-border-hover.png);
+      @extend %bg-center-cover;
+      z-index: -1;
+      display: none;
+
+      @include media-w($xl) {
+        left: -66px;
+      }
+
+      @include media-w($smm) {
+        width: 304px;
+        height: 354px;
+        top: -40px;
+        left: -65px;
+      }
+    }
+
     &:hover {
-      top: -10px;
+      top: -31px;
       background: rgba(5, 4, 14, 0.4);
       box-shadow: 0px 34px 74px rgba(162, 220, 137, 0.2);
       border-radius: 20px;
 
+      &::after {
+        display: block;
+      }
+
       &::before {
-        top: -3px;
+        display: none;
       }
 
       .specifications__slider-round {
+        top: 27px;
         color: $gray;
       }
+
+      .specifications__slider-price {
+        top: 102px
+      }
+
+      .specifications__slider-amount {
+        top: 140px;
+      }
+
     }
   }
 
@@ -441,6 +531,10 @@
     left: 39%;
     z-index: 9;
     display: none;
+
+    @include media-w($mdl) {
+      bottom: -25px;
+    }
   }
 
   .slick-next {
@@ -451,6 +545,30 @@
     left: 48%;
     z-index: 9;
     display: none;
+
+    @include media-w($mdl) {
+      bottom: -25px;
+    }
+
+    @include media-w($sm) {
+      left: 50%;
+    }
+
+    @include media-w($smx) {
+      left: 24%;
+      bottom: -21px;
+    }
+
+    @include media-w($smm) {
+      left: 15%;
+    }
+  }
+
+  .specifications__slider-item {
+    @include media-w($smx) {
+      width: 176px !important;
+      margin-left: -30px;
+    }
   }
 
   .slick-slider .slick-list {
@@ -459,4 +577,91 @@
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+
+  &__conditions-card {
+    margin-top: 49px;
+    padding: 63px 34px 57px 34px;
+    position: relative;
+    width: 370px;
+    height: 349px;
+    background: rgba(5, 4, 14, 0.4);
+    box-shadow: 0px 34px 74px rgba(162, 220, 137, 0.2);
+    border-radius: 20px;
+    margin-bottom: 33px;
+
+    @include media-w($smm) {
+      margin-bottom: 31px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: -75px;
+      width: 507px;
+      height: 496px;
+      background-image: url(../images/specifications/cards/condition-border.png);
+      @extend %bg-center-cover;
+    }
+
+  }
+
+  &__conditions-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 38px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -53px;
+      right: -32px;
+      width: 125px;
+      height: 125px;
+      background-image: url(../images/specifications/cards/embleme.png);
+      @extend %bg-center-cover;
+    }
+  }
+
+  &__conditions-condition {
+    @extend %Montserrat-700;
+    font-size: 16px;
+    line-height: 1.44;
+    text-transform: uppercase;
+    color: $hover-span;
+  }
+
+  &__conditions-subtitle {
+    text-align: left;
+    display: block;
+    font-size: 12px;
+    line-height: 1.91;
+    color: #a2dc89;
+    margin: 0px auto 0px 0px;
+  }
+
+  &__conditions-text {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.64;
+    margin-bottom: 16px;
+
+    &--two {
+      margin-bottom: 9px;
+    }
+
+    &--tree {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    width: 370px;
+    height: 62px;
+    border-radius: 17px;
+    margin-left: -13px;
+  }
+
 }
