@@ -27,7 +27,7 @@ $(function () {
 				settings: {
 					slidesToShow: 2,
 					draggable: true,
-					autoplay: true,
+					// autoplay: true,
 				},
 			},
 			{
@@ -93,12 +93,13 @@ $(function () {
 	$(".specifications__slider").slick({
 		slidesToShow: 5,
 		slidesToScroll: 1,
-
+		arrows: false,
 		responsive: [
 			{
 				breakpoint: 992,
 				settings: {
 					slidesToShow: 4,
+					arrows: true,
 					prevArrow:
 						'<button type="button" class="slick-prev"><svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.00003 0L6.50216 1.5022L4.06662 3.93774H33.723V6.06219H4.06662L6.50216 8.4978L5.00003 10L-3.8147e-06 4.99996L5.00003 0Z" fill="#B4F299"/></svg></button>',
 
@@ -110,6 +111,8 @@ $(function () {
 				breakpoint: 898,
 				settings: {
 					slidesToShow: 3,
+					arrows: true,
+					prevArrow: false,
 					nextArrow:
 						'<button type="button" class="slick-next"><svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.723 0L27.2209 1.5022L29.6564 3.93774H0V6.06219H29.6564L27.2209 8.4978L28.723 10L33.723 4.99996L28.723 0Z" fill="#B4F299"/></svg></button>',
 				},
@@ -119,6 +122,8 @@ $(function () {
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 2,
+					arrows: true,
+					prevArrow: false,
 					nextArrow:
 						'<button type="button" class="slick-next"><svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.723 0L27.2209 1.5022L29.6564 3.93774H0V6.06219H29.6564L27.2209 8.4978L28.723 10L33.723 4.99996L28.723 0Z" fill="#B4F299"/></svg></button>',
 				},
@@ -128,6 +133,8 @@ $(function () {
 				breakpoint: 470,
 				settings: {
 					slidesToShow: 1,
+					arrows: true,
+					prevArrow: false,
 					nextArrow:
 						'<button type="button" class="slick-next"><svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.723 0L27.2209 1.5022L29.6564 3.93774H0V6.06219H29.6564L27.2209 8.4978L28.723 10L33.723 4.99996L28.723 0Z" fill="#B4F299"/></svg></button>',
 				},

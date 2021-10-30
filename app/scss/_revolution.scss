@@ -290,12 +290,21 @@
     &::after {
       position: absolute;
       content: '';
-      top: -52px;
+      top: -41px;
       right: -27px;
       left: -74px;
       bottom: -14px;
       background-image: url(../images/revolution/card-border-hover.png);
       display: none;
+
+      @include media-w($md) {
+        top: -41px;
+        right: -27px;
+        left: -74px;
+        bottom: -14px;
+        height: 327px;
+        width: 400px;
+      }
 
       @include media-w($smz) {
         height: 327px;
@@ -308,12 +317,12 @@
 
       @include media-w($sms) {
         background-image: url(../images/revolution/card-border-hover1.png);
-        width: 318px;
-        height: 330px;
+        width: 325px;
+        height: 303px;
         top: -45px;
         right: 0px;
         left: -43px;
-        bottom: -91px;
+        bottom: -81px;
       }
     }
 
@@ -344,6 +353,11 @@
 
       & .revolution__card-svg path {
         fill: $white;
+      }
+
+      @include media-w($smz) {
+        width: 275px;
+        height: 251px;
       }
     }
   }

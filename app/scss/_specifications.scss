@@ -470,7 +470,6 @@
       .specifications__slider-amount {
         top: 140px;
       }
-
     }
   }
 
@@ -562,6 +561,10 @@
     @include media-w($smm) {
       left: 15%;
     }
+
+    @include media-w($xxs) {
+      left: 26%;
+    }
   }
 
   .specifications__slider-item {
@@ -593,17 +596,58 @@
       margin-bottom: 31px;
     }
 
+    @include media-w($xs) {
+      padding: 29px 17px 57px 23px;
+      margin-top: 22px;
+      width: 320px;
+      height: 299px;
+    }
+
+    @include media-w($xxs) {
+      padding: 24px 20px 22px 29px;
+      margin: 22px 0px 31px 0px;
+      width: 290px;
+      height: 289px;
+    }
+
+    @include media-w($xxsl) {
+      width: 280px;
+      height: 279px;
+      padding: 33px 12px 23px 23px;
+      margin: 22px 0px 31px -9px;
+    }
+
     &::before {
       content: '';
       position: absolute;
-      top: -30px;
-      left: -75px;
+      top: -42px;
+      left: -68px;
       width: 507px;
       height: 496px;
       background-image: url(../images/specifications/cards/condition-border.png);
       @extend %bg-center-cover;
-    }
 
+      @include media-w($xs) {
+        top: -32px;
+        left: -57px;
+        width: 438px;
+        height: 423px;
+      }
+
+      @include media-w($xxs) {
+        top: -30px;
+        left: -5px;
+        width: 304px;
+        height: 407px;
+      }
+
+      @include media-w($xxsl) {
+        top: -30px;
+        left: -5px;
+        width: 296px;
+        height: 392px;
+      }
+    }
   }
 
   &__conditions-wrapper {
@@ -612,6 +656,10 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 38px;
+
+    @include media-w($xxs) {
+      margin-bottom: 11px;
+    }
 
     &::after {
       content: '';
@@ -622,6 +670,11 @@
       height: 125px;
       background-image: url(../images/specifications/cards/embleme.png);
       @extend %bg-center-cover;
+
+      @include media-w($xs) {
+        top: -40px;
+        right: -30px;
+      }
     }
   }
 
@@ -648,6 +701,10 @@
     line-height: 1.64;
     margin-bottom: 16px;
 
+    @include media-w($xxsl) {
+      font-size: 12px;
+    }
+
     &--two {
       margin-bottom: 9px;
     }
@@ -662,6 +719,20 @@
     height: 62px;
     border-radius: 17px;
     margin-left: -13px;
+
+    @include media-w($xs) {
+      width: 318px;
+      height: 62px;
+      margin-left: 1px;
+    }
+
+    @include media-w($xxs) {
+      width: 296px;
+    }
+
+    @include media-w($xxsl) {
+      width: 278px;
+    }
   }
 
 }
