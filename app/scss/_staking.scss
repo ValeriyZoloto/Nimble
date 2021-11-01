@@ -149,7 +149,7 @@
     max-width: 940px;
     display: flex;
     align-items: flex-end;
-    margin: 0px 0px 18px 60px;
+    margin: 0px 0px -15px 60px;
   }
 
   &__item {
@@ -334,6 +334,10 @@
     left: 48%;
     z-index: 9;
 
+    @include media-w($smx) {
+      bottom: 15px;
+    }
+
     @include media-w($smm) {
       bottom: 16px;
       left: 37%;
@@ -347,6 +351,10 @@
     bottom: 0px;
     left: 39%;
     z-index: 9;
+
+    @include media-w($smx) {
+      bottom: 15px;
+    }
 
     @include media-w($smm) {
       left: 20%;
@@ -415,7 +423,7 @@
     }
 
     @include media-w($smx) {
-      margin: 0px 0px 0px -6px;
+      margin: 0px 0px 56px -6px;
       font-size: 14px;
       line-height: 20px;
     }

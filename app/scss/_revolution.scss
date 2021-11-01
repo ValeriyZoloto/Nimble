@@ -107,7 +107,10 @@
     transition: margin 0.5s;
 
     &--active {
-      margin-top: 250px;
+
+      @include media-w($smm) {
+        margin-top: 250px;
+      }
     }
 
     @include media-w($xl) {

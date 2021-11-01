@@ -142,6 +142,26 @@ $(function () {
 		],
 	});
 
+	//kibotron__list
+
+	$(".kibotron__slider").slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		arrows: false,
+		responsive: [
+			{
+				breakpoint: 898,
+				settings: {
+					slidesToShow: 2,
+					arrows: true,
+					prevArrow: false,
+					nextArrow:
+						'<button type="button" class="slick-next"><svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.723 0L27.2209 1.5022L29.6564 3.93774H0V6.06219H29.6564L27.2209 8.4978L28.723 10L33.723 4.99996L28.723 0Z" fill="#B4F299"/></svg></button>',
+				},
+			},
+		],
+	});
+
 	$(".token__btn").on("click", function () {
 		$(".token__text--hidden").addClass("token__text--active");
 		$(".token__btn").addClass("token__btn--hidden");
@@ -164,5 +184,17 @@ $(function () {
 		$(".staking__text--hidden").removeClass("staking__text--active");
 		$(".staking__botton").removeClass("staking__botton--open");
 		$(".staking__btn").removeClass("staking__btn--hidden");
+	});
+
+	$(".affiliate__btn").on("click", function () {
+		$(".affiliate__hidden").addClass("affiliate__hidden--active");
+		$(".affiliate__btn").addClass("affiliate__btn--hidden");
+		$(".affiliate__botton").addClass("affiliate__botton--open");
+	});
+
+	$(".affiliate__botton").on("click", function () {
+		$(".affiliate__hidden").removeClass("affiliate__hidden--active");
+		$(".affiliate__botton").removeClass("affiliate__botton--open");
+		$(".affiliate__btn").removeClass("affiliate__btn--hidden");
 	});
 });

@@ -1,0 +1,337 @@
+.kibotron {
+  position: relative;
+  padding: 70px 0px 58px 0px;
+
+  &__blur {
+    position: absolute;
+    top: -450px;
+    left: -4px;
+    width: 1351px;
+    height: 1550px;
+    background-image: url(../images/kibotron/kibotron-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+    @include media-w($sxl) {
+      top: -413px;
+      left: -38px;
+      width: 1402px;
+      height: 2042px;
+    }
+  }
+
+  &__content {
+    margin-left: auto;
+    max-width: 673px;
+
+    @include media-w($sxl) {
+      margin: 836px auto 0px auto;
+    }
+
+    @include media-w($mdb) {
+      margin: 692px auto 0px auto;
+    }
+  }
+
+  &__title {
+    position: relative;
+    @extend %Montserrat-800;
+    font-size: 48px;
+    line-height: 1.22;
+    margin-bottom: 72px;
+    padding-left: 81px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 59px;
+      height: 59px;
+      background-image: url(../images/kibotron/kibotron.png);
+      @extend %bg-center-cover;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 97px;
+
+    @include media-w($sxl) {
+      display: none;
+    }
+  }
+
+  &__slider {
+    display: none;
+
+    @include media-w($sxl) {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 319px;
+    height: 263px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      margin-top: -44px;
+      border-radius: 20px;
+      box-shadow: 20px 17px 20px 0px $accent;
+    }
+
+    &--one {
+      margin-bottom: 42px;
+    }
+
+    &--two {
+      margin-bottom: 42px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 319px;
+      height: 263px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: url(../images/kibotron/item-border.png);
+      @extend %bg-center-cover;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 56px 83px 80px 39px;
+
+    &:hover {
+      margin-bottom: 44px;
+    }
+
+    &--two {
+      padding: 56px 58px 80px 39px;
+    }
+
+    &--three {
+      padding: 56px 55px 80px 39px;
+    }
+
+    &--four {
+      padding: 56px 55px 80px 39px;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    padding-left: 56px;
+    @extend %Montserrat-700;
+    font-size: 14px;
+    line-height: 1.43;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #00FFAA 0%, #4579F5 53.01%, #9C42F5 99.83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+    &--one {
+      max-width: 197px;
+      margin-bottom: 27px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 0;
+        left: 0;
+        background-image: url(../images/kibotron/subtitle.png);
+        @extend %bg-center-cover;
+      }
+    }
+
+    &--two {
+      max-width: 168px;
+      margin-bottom: 27px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 0;
+        left: 0;
+        background-image: url(../images/kibotron/subtitle-blue.png);
+        @extend %bg-center-cover;
+      }
+    }
+
+    &--three {
+      max-width: 206px;
+      margin-bottom: 27px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 0;
+        left: 0;
+        background-image: url(../images/kibotron/subtitle-green.png);
+        @extend %bg-center-cover;
+      }
+    }
+
+    &--four {
+      max-width: 171px;
+      margin-bottom: 27px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 0;
+        left: 0;
+        background-image: url(../images/kibotron/subtitle-four.png);
+        @extend %bg-center-cover;
+      }
+    }
+  }
+
+  &__text {
+    @extend %Montserrat-400;
+    font-size: 12px;
+    line-height: 1.67;
+
+    &--one {
+      max-width: 139px;
+      margin: 0px 0px 0px 52px;
+      @include overflow($row-4);
+    }
+
+    &--two {
+      max-width: 172px;
+      margin: 0px 0px 0px 49px;
+      @include overflow($row-5);
+    }
+
+    &--three {
+      max-width: 172px;
+      margin: 0px 0px 0px 49px;
+      @include overflow($row-4);
+    }
+
+    &--four {
+      max-width: 161px;
+      margin: 0px 0px 0px 49px;
+      @include overflow($row-5);
+    }
+  }
+
+  &__version {
+    margin: 0 auto 49px;
+    max-width: 791px;
+    @extend %Montserrat-700;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+    @include overflow($row-3);
+
+    @include media-w($mdb) {
+      font-size: 22px;
+    }
+  }
+
+  &__btn {
+    padding: 21px 5px 21px 5px;
+    display: block;
+    text-align: center;
+    width: 254px;
+    height: 62px;
+    background: linear-gradient(135deg, #00FFAA 0%, #4579F5 53.01%, #9C42F5 99.83%);
+    border-radius: 17px;
+    margin: 0 auto 117px;
+    @extend %Montserrat-600;
+    font-size: 16px;
+  }
+
+  &__cooperation {
+    max-width: 1062px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-w($mdb) {
+      flex-direction: column;
+    }
+  }
+
+  &__question {
+    @extend %Montserrat-400;
+    font-size: 34px;
+    line-height: 1.2;
+    color: $accent;
+
+    @include media-w($mdb) {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__mail {
+    @extend %Montserrat-800;
+    font-size: 34px;
+    line-height: 1.2;
+    text-decoration-line: underline;
+    color: $accent;
+
+    @include media-w($mdb) {
+      font-size: 24px;
+    }
+  }
+
+  .slick-slider .slick-list {
+    padding-top: 45px;
+  }
+
+  .slick-next {
+    position: absolute;
+    background-color: transparent;
+    border: transparent;
+    bottom: 0px;
+    left: 22%;
+    z-index: 9;
+
+
+    // @include media-w($mdl) {
+    //   bottom: -25px;
+    // }
+
+    // @include media-w($sm) {
+    //   left: 50%;
+    // }
+
+    // @include media-w($smx) {
+    //   left: 24%;
+    //   bottom: -21px;
+    // }
+
+    // @include media-w($smm) {
+    //   left: 15%;
+    // }
+
+    // @include media-w($xxs) {
+    //   left: 26%;
+    // }
+  }
+}

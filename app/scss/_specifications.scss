@@ -1,5 +1,5 @@
 .specifications {
-  padding: 96px 0 10px 0px;
+  padding: 100px 0 10px 0px;
 
   &__upper {
     margin: 0px 0px 0px -10px;
@@ -290,7 +290,7 @@
 
   &__bottom {
     position: relative;
-    padding: 166px 0px 0px 0px;
+    padding: 169px 0px 0px 0px;
     text-align: center;
 
     @include media-w($smx) {
@@ -575,7 +575,7 @@
   }
 
   .slick-slider .slick-list {
-    padding-top: 60px;
+    padding-top: 56px;
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -583,14 +583,14 @@
 
   &__conditions-card {
     margin-top: 49px;
-    padding: 63px 34px 57px 34px;
+    padding: 60px 34px 57px 34px;
     position: relative;
     width: 370px;
     height: 349px;
     background: rgba(5, 4, 14, 0.4);
     box-shadow: 0px 34px 74px rgba(162, 220, 137, 0.2);
     border-radius: 20px;
-    margin-bottom: 33px;
+    margin-bottom: 29px;
 
     @include media-w($smm) {
       margin-bottom: 31px;
@@ -620,8 +620,8 @@
     &::before {
       content: '';
       position: absolute;
-      top: -42px;
-      left: -68px;
+      top: -33px;
+      left: -75px;
       width: 507px;
       height: 496px;
       background-image: url(../images/specifications/cards/condition-border.png);
@@ -664,8 +664,8 @@
     &::after {
       content: '';
       position: absolute;
-      top: -53px;
-      right: -32px;
+      top: -52px;
+      right: -36px;
       width: 125px;
       height: 125px;
       background-image: url(../images/specifications/cards/embleme.png);

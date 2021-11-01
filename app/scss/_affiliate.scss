@@ -1,5 +1,5 @@
 .affiliate {
-  padding: 78px 0px 0px 0px;
+  padding: 75px 0px 126px 0px;
   min-height: 991px;
   background-image: url(../images/affiliate/tel.png);
   background-repeat: no-repeat;
@@ -14,9 +14,18 @@
     background-position: top 0px left 158px;
   }
 
+  @include media-w($smx) {
+    padding: 30px 0px 0px 0px;
+    background-position: top 11px left -38px;
+  }
+
+  @include media-w($xxs) {
+    background-position: top 11px left -81px;
+  }
+
   &__content {
     max-width: 497px;
-    margin: 138px 99px 0px auto;
+    margin: 138px 95px 0px auto;
 
     @include media-w($sxl) {
       margin: 935px auto 0px auto;
@@ -32,19 +41,36 @@
   }
 
   &__title {
-    margin-bottom: 52px;
+    margin-bottom: 54px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+
+    @include media-w($smx) {
+      margin: 0px 0px 54px -7px;
+      max-width: 185px;
+    }
   }
 
   &__list {
     margin-bottom: 137px;
+
+    @include media-w($smx) {
+      margin: 0px 0px 70px -4px;
+    }
+
+    @include media-w($xss) {
+      margin: 0px 0px 70px 0px;
+    }
   }
 
   &__item {
 
     &--one {
-      margin-bottom: 9px;
+      margin-bottom: 8px;
+
+      @include media-w($smm) {
+        margin-bottom: 9px;
+      }
     }
 
     &--two {
@@ -53,18 +79,34 @@
 
     &--three {
       margin-bottom: 18px;
+
+      @include media-w($smm) {
+        margin-bottom: 20px;
+      }
     }
 
     &--four {
       margin-bottom: 16px;
+
+      @include media-w($smm) {
+        margin-bottom: 14px;
+      }
     }
 
     &--five {
       margin-bottom: 14px;
+
+      @include media-w($smm) {
+        margin-bottom: 15px;
+      }
     }
 
     &--six {
       margin-bottom: 16px;
+
+      @include media-w($smm) {
+        margin-bottom: 15px;
+      }
     }
 
     &--seven {
@@ -80,6 +122,10 @@
 
     &--one {
       max-width: 350px;
+
+      @include media-w($smm) {
+        max-width: 288px;
+      }
     }
 
     &--two {
@@ -120,6 +166,10 @@
     font-size: 16px;
     line-height: 1.25;
 
+    @include media-w($xxs) {
+      font-size: 14px;
+    }
+
 
     &--one {
       background: linear-gradient(105.56deg, #E2F685 18.43%, #8AF9AD 89.58%);
@@ -138,6 +188,12 @@
         background: linear-gradient(105.56deg, #E2F685 18.43%, #8AF9AD 89.58%);
         box-shadow: 0px 24px 64px rgba(138, 249, 173, 0.3);
         border-radius: 17px;
+
+        @include media-w($smm) {
+          height: 2px;
+          left: 4px;
+          width: 28px;
+        }
       }
     }
 
@@ -158,6 +214,12 @@
         background: linear-gradient(139.33deg, #CAEE39 -14.59%, #E99A3D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
         border-radius: 25px;
+
+        @include media-w($smm) {
+          height: 2px;
+          left: 4px;
+          width: 28px;
+        }
       }
     }
 
@@ -178,6 +240,12 @@
         background: linear-gradient(139.33deg, #CAEE39 -14.59%, #E99A3D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
         border-radius: 25px;
+
+        @include media-w($smm) {
+          height: 2px;
+          left: 8px;
+          width: 28px;
+        }
       }
     }
 
@@ -197,6 +265,12 @@
         background: linear-gradient(139.33deg, #CAEE39 -14.59%, #E99A3D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
         border-radius: 25px;
+
+        @include media-w($smm) {
+          height: 2px;
+          left: 1px;
+          width: 28px;
+        }
       }
     }
 
@@ -216,6 +290,12 @@
         background: linear-gradient(139.33deg, #CAEE39 -14.59%, #E99A3D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
         border-radius: 25px;
+
+        @include media-w($smm) {
+          height: 2px;
+          left: 3px;
+          width: 28px;
+        }
       }
     }
 
@@ -235,6 +315,12 @@
         background: linear-gradient(139.33deg, #EE6439 -14.59%, #E9713D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
         border-radius: 25px;
+
+        @include media-w($smm) {
+          height: 2px;
+          left: 5px;
+          width: 28px;
+        }
       }
     }
 
@@ -254,7 +340,19 @@
         background: linear-gradient(139.33deg, #EE6439 -14.59%, #E9713D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
         border-radius: 25px;
+
+        @include media-w($smm) {
+          height: 2px;
+          left: 2px;
+          width: 28px;
+        }
       }
+    }
+  }
+
+  &__hidden-span {
+    @include media-w($smm) {
+      display: none;
     }
   }
 
@@ -264,8 +362,32 @@
     justify-content: space-between;
     align-items: center;
 
+    @include media-w($smx) {
+      max-width: 404px;
+    }
+
+    @include media-w($xss) {
+      max-width: 310px;
+    }
+
+    @include media-w($xxs) {
+      max-width: 280px;
+    }
+
     &--one {
       max-width: 497px;
+
+      @include media-w($smx) {
+        max-width: 388px;
+      }
+
+      @include media-w($xss) {
+        max-width: 310px;
+      }
+
+      @include media-w($xxs) {
+        max-width: 280px;
+      }
     }
   }
 
@@ -274,6 +396,14 @@
     width: 418px;
     height: 8px;
     border-radius: 17px;
+
+    @include media-w($smx) {
+      width: 318px;
+    }
+
+    @include media-w($xss) {
+      width: 220px;
+    }
 
     &--one {
       background: linear-gradient(105.56deg, #E2F685 18.43%, #8AF9AD 89.58%);
@@ -290,7 +420,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 210px;
+        width: calc(100% - 50%);
         height: 8px;
         background: linear-gradient(139.33deg, #CAEE39 -14.59%, #E99A3D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
@@ -309,7 +439,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 209px;
+        width: calc(100% - 50%);
         height: 8px;
         background: linear-gradient(139.33deg, #CAEE39 -14.59%, #E99A3D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
@@ -328,7 +458,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 162px;
+        width: calc(100% - 62%);
         height: 8px;
         background: linear-gradient(139.33deg, #EED139 -14.59%, #E9713D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
@@ -347,7 +477,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 160px;
+        width: calc(100% - 62%);
         height: 8px;
         background: linear-gradient(139.33deg, #EED139 -14.59%, #E9713D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
@@ -366,7 +496,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 102px;
+        width: calc(100% - 76%);
         height: 8px;
         background: linear-gradient(139.33deg, #EE6439 -14.59%, #E9713D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
@@ -385,7 +515,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 102px;
+        width: calc(100% - 76%);
         height: 8px;
         background: linear-gradient(139.33deg, #EE6439 -14.59%, #E9713D 99.86%);
         box-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
@@ -400,6 +530,9 @@
     font-size: 26px;
     line-height: 1.23;
 
+    @include media-w($xss) {
+      font-size: 20px;
+    }
 
     &--one {
       text-shadow: 0px 24px 64px rgba(138, 249, 173, 0.3);
@@ -459,6 +592,7 @@
     line-height: 1.5;
     color: $gray;
 
+
     @include media-w($sxl) {
       margin-left: 0;
     }
@@ -466,6 +600,21 @@
     @include media-w($mdl) {
       width: 100%;
       max-width: 100%;
+    }
+
+    @include media-w($smx) {
+      width: 86%;
+      max-width: 70%;
+      margin-left: 14%;
+    }
+
+    @include media-w($xss) {
+      margin-left: 20%;
+    }
+
+    @include media-w($xxs) {
+      font-size: 14px;
+      margin-left: 24%;
     }
 
     &::before {
@@ -477,6 +626,96 @@
       height: 111px;
       background-image: url(../images/affiliate/i.png);
       @extend %bg-center-cover;
+    }
+  }
+
+  &__hidden {
+    @include media-w($smx) {
+      transition: margin 0.7s;
+      margin-left: -2954px;
+    }
+  }
+
+  &__hidden--active {
+    margin-left: 0px;
+  }
+
+  &__btn {
+    margin-bottom: 10px;
+    position: relative;
+    display: none;
+
+    @include media-w($smx) {
+      display: block;
+      background-color: transparent;
+      color: #B4F299;
+      border: none;
+      padding-right: 18px;
+
+      &--hidden {
+        display: none;
+      }
+
+      &--in {
+        display: none;
+      }
+    }
+
+    @include media-w($smx) {
+      margin: 21px 0px 0px 57px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: -6px;
+      top: 8px;
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/token/aplication/polygon.png);
+      @extend %bg-center-contain;
+      transform: rotate(-31deg);
+    }
+  }
+
+  &__botton {
+    margin-bottom: 10px;
+    position: relative;
+    display: none;
+
+    @include media-w($sxla) {
+      background-color: transparent;
+      color: #B4F299;
+      border: none;
+      padding-right: 18px;
+
+      &--open {
+        display: block;
+      }
+
+      &--in {
+        display: none;
+      }
+    }
+
+    @include media-w($smx) {
+      margin: 10px 0px 0px 63px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      right: -16px;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/token/aplication/polygon.png);
+      transform: rotate(-90deg);
+      @extend %bg-center-contain;
     }
   }
 }
