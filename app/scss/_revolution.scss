@@ -1,6 +1,6 @@
 .revolution {
   position: relative;
-  padding: 173px 0px 0px 0px;
+  padding: 174px 0px 0px 0px;
 
   &__aside {
     position: absolute;
@@ -92,7 +92,7 @@
 
     @include media-w($sms) {
       margin: -74px 0px 109px 0px;
-      z-index: 1;
+      z-index: -1;
     }
   }
 
@@ -101,10 +101,11 @@
     max-width: 100%;
     @extend %Montserrat-800;
     font-size: 48px;
-    line-height: 1.22;
+    line-height: 1.24;
     color: $accent;
     margin-bottom: 25px;
     transition: margin 0.5s;
+    @include overflow($row-3);
 
     &--active {
 
@@ -125,10 +126,12 @@
 
   &__subtitle {
     display: block;
+    max-width: 597px;
     font-size: 18px;
     line-height: 1.22;
     color: $gray;
     margin-bottom: 36px;
+    @include overflow($row);
 
     @include media-w($sms) {
       max-width: 232px;
@@ -236,11 +239,9 @@
   &__cards {
     display: flex;
     max-width: 1297px;
-    margin: -53px auto 0px;
+    margin: -75px auto 0px;
     justify-content: space-between;
   }
-
-  &__card {}
 
   &__card-link {
     padding: 48px 84px 52px 46px;
@@ -293,11 +294,12 @@
     &::after {
       position: absolute;
       content: '';
-      top: -41px;
-      right: -27px;
+      top: -16px;
+      right: -71px;
       left: -74px;
-      bottom: -14px;
+      bottom: -65px;
       background-image: url(../images/revolution/card-border-hover.png);
+      @extend %bg-center-cover;
       display: none;
 
       @include media-w($md) {
@@ -330,6 +332,7 @@
     }
 
     &:hover {
+      padding: 49px 114px 52px 68px;
       margin-top: -30px;
       width: 314px;
       height: 279px;
@@ -401,10 +404,11 @@
     line-height: 1.64;
     color: $white;
     width: 161px;
+    @include overflow($row-3);
   }
 
   .slick-slider .slick-list {
-    padding-top: 45px;
+    padding-top: 66px;
   }
 
   .slick-next {
@@ -434,5 +438,9 @@
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+
+  &__down-img {
+    object-fit: cover;
   }
 }

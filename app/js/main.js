@@ -6,6 +6,20 @@ $(function () {
 		$(".revolution__title").toggleClass("revolution__title--active");
 	});
 
+	//меню навигация
+	$(".scroll").click(function (event) {
+		console.log(11111);
+		event.preventDefault();
+		$("html").animate({ scrollTop: 0 }, 1500);
+	});
+
+	$(".menu a, header a").on("click", function (e) {
+		e.preventDefault();
+		const id = $(this).attr("href"),
+			top = $(id).offset().top;
+		$("body,html").animate({ scrollTop: top }, 1500);
+	});
+
 	//revolution-slider
 	$(".revolution__cards").slick({
 		slidesToShow: 4,
@@ -153,6 +167,16 @@ $(function () {
 				breakpoint: 898,
 				settings: {
 					slidesToShow: 2,
+					arrows: true,
+					prevArrow: false,
+					nextArrow:
+						'<button type="button" class="slick-next"><svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.723 0L27.2209 1.5022L29.6564 3.93774H0V6.06219H29.6564L27.2209 8.4978L28.723 10L33.723 4.99996L28.723 0Z" fill="#B4F299"/></svg></button>',
+				},
+			},
+			{
+				breakpoint: 723,
+				settings: {
+					slidesToShow: 1,
 					arrows: true,
 					prevArrow: false,
 					nextArrow:

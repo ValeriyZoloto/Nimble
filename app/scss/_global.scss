@@ -4,6 +4,7 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -165,6 +166,10 @@ body {
 
 .logo {
   margin-left: -50px;
+
+  &__img {
+    object-fit: cover;
+  }
 }
 
 .title {
@@ -174,5 +179,23 @@ body {
 
   @include media-w($smx) {
     font-size: 26px;
+  }
+}
+
+.scroll-up {
+  position: fixed;
+  right: 65px;
+  bottom: 50px;
+
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 19px;
+    height: 13px;
+    transform: rotate(180deg);
+    background-image: url(../images/menu/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

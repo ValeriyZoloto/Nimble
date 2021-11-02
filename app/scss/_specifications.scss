@@ -184,7 +184,7 @@
   }
 
   &__content {
-    margin: 33px 0px 0px 0px;
+    margin: 31px 0px 0px 0px;
 
     @include media-w($xl) {
       position: relative;
@@ -193,7 +193,7 @@
 
   &__title {
     margin: 0px 0px 62px -21px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.01em;
 
     @include media-w($xl) {
       position: absolute;
@@ -290,7 +290,7 @@
 
   &__bottom {
     position: relative;
-    padding: 169px 0px 0px 0px;
+    padding: 167px 0px 0px 0px;
     text-align: center;
 
     @include media-w($smx) {
@@ -425,8 +425,8 @@
       content: '';
       width: 308px;
       height: 354px;
-      top: -41px;
-      left: -73px;
+      top: -19px;
+      left: -68px;
       background-image: url(../images/specifications/cards/card-border-hover.png);
       @extend %bg-center-cover;
       z-index: -1;
@@ -459,16 +459,18 @@
       }
 
       .specifications__slider-round {
-        top: 27px;
+        top: 47px;
+        left: 46%;
         color: $gray;
       }
 
       .specifications__slider-price {
-        top: 102px
+        top: 121px;
+        left: 46%;
       }
 
       .specifications__slider-amount {
-        top: 140px;
+        top: 159px;
       }
     }
   }

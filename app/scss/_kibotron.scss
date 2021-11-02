@@ -14,10 +14,49 @@
     z-index: -1;
 
     @include media-w($sxl) {
-      top: -413px;
-      left: -38px;
+      top: -430px;
+      left: 0px;
       width: 1402px;
       height: 2042px;
+    }
+
+    @include media-w($md) {
+      background-image: url(../images/kibotron/kibotron-bg-mobile.png);
+      width: 100%;
+      height: 2353px;
+      top: -1150px;
+    }
+
+    @include media-w($mdl) {
+      height: 2353px;
+      top: -972px;
+    }
+
+    @include media-w($sm) {
+      height: 2353px;
+      top: -808px;
+    }
+
+    @include media-w($smx) {
+      height: 2353px;
+      top: -715px;
+    }
+
+    @include media-w($smz) {
+      height: 2659px;
+      top: -636px;
+    }
+
+    @include media-w($sms) {
+      height: 2459px;
+      top: -504px;
+    }
+
+    @include media-w($xxs) {
+      width: 129%;
+      height: 2257px;
+      top: -504px;
+      left: -78px;
     }
   }
 
@@ -26,11 +65,27 @@
     max-width: 673px;
 
     @include media-w($sxl) {
-      margin: 836px auto 0px auto;
+      margin: 799px auto 0px auto;
     }
 
     @include media-w($mdb) {
-      margin: 692px auto 0px auto;
+      margin: 781px auto 0px auto;
+    }
+
+    @include media-w($md) {
+      margin: 721px auto 0px auto;
+    }
+
+    @include media-w($mdl) {
+      margin: 733px auto 0px auto;
+    }
+
+    @include media-w($sm) {
+      margin: 568px auto 0px auto;
+    }
+
+    @include media-w($smm) {
+      margin: 293px auto 0px auto;
     }
   }
 
@@ -41,6 +96,19 @@
     line-height: 1.22;
     margin-bottom: 72px;
     padding-left: 81px;
+
+    @include media-w($xxs) {
+      font-size: 38px;
+    }
+
+    @include media-w($smm) {
+      margin-left: 25px;
+      margin-bottom: 68px;
+    }
+
+    @include media-w($xss) {
+      margin-left: 0px;
+    }
 
     &::before {
       content: '';
@@ -63,6 +131,10 @@
 
     @include media-w($sxl) {
       display: none;
+    }
+
+    @include media-w($smm) {
+      margin-bottom: 86px;
     }
   }
 
@@ -106,6 +178,12 @@
       right: 0;
       background-image: url(../images/kibotron/item-border.png);
       @extend %bg-center-cover;
+
+      @include media-w($smm) {
+        background-image: url(../images/kibotron/item-border-mobile.png);
+        width: 290px;
+        height: 263px;
+      }
     }
   }
 
@@ -249,10 +327,27 @@
     @include media-w($mdb) {
       font-size: 22px;
     }
+
+    @include media-w($sms) {
+      font-size: 18px;
+    }
+
+    @include media-w($smm) {
+      max-width: 263px;
+      margin-left: 53px;
+      margin-bottom: 44px;
+      line-height: 1.55;
+      @include overflow($row-6);
+    }
+
+    @include media-w($xss) {
+      margin-left: 21px;
+    }
   }
 
   &__btn {
-    padding: 21px 5px 21px 5px;
+    padding: 22px 5px 20px 5px;
+    border: 1px solid transparent;
     display: block;
     text-align: center;
     width: 254px;
@@ -262,6 +357,31 @@
     margin: 0 auto 117px;
     @extend %Montserrat-600;
     font-size: 16px;
+    transition: 0.5s;
+
+    @include media-w($smm) {
+      margin-left: 62px;
+      margin-bottom: 96px;
+    }
+
+    @include media-w($xss) {
+      margin-left: 0;
+    }
+
+    &:focus {
+      box-shadow: 10px 7px 10px 0px $accent;
+    }
+
+    &:hover {
+      @extend %Montserrat-700;
+      background: linear-gradient(135deg, #158862 0%, #092872 53.01%, #561497 99.83%);
+      border: 1px solid $accent;
+    }
+
+    &:active {
+      box-shadow: 10px 7px 10px 0px $accent;
+      color: $accent-light;
+    }
   }
 
   &__cooperation {
@@ -286,6 +406,21 @@
       font-size: 24px;
       margin-bottom: 15px;
     }
+
+    @include media-w($sms) {
+      font-size: 18px;
+    }
+
+    @include media-w($smm) {
+      text-align: center;
+      max-width: 145px;
+      margin-left: -86px;
+      line-height: 1.22;
+    }
+
+    @include media-w($xss) {
+      margin-left: 0px;
+    }
   }
 
   &__mail {
@@ -297,6 +432,18 @@
 
     @include media-w($mdb) {
       font-size: 24px;
+    }
+
+    @include media-w($sms) {
+      font-size: 18px;
+    }
+
+    @include media-w($smm) {
+      margin-left: -86px;
+    }
+
+    @include media-w($xss) {
+      margin-left: 0px;
     }
   }
 
@@ -313,25 +460,10 @@
     z-index: 9;
 
 
-    // @include media-w($mdl) {
-    //   bottom: -25px;
-    // }
 
-    // @include media-w($sm) {
-    //   left: 50%;
-    // }
-
-    // @include media-w($smx) {
-    //   left: 24%;
-    //   bottom: -21px;
-    // }
-
-    // @include media-w($smm) {
-    //   left: 15%;
-    // }
-
-    // @include media-w($xxs) {
-    //   left: 26%;
-    // }
+    @include media-w($smm) {
+      bottom: -16px;
+      left: 28%;
+    }
   }
 }

@@ -1,5 +1,5 @@
 .token {
-  padding: 131px 0px 145px 0px;
+  padding: 130px 0px 145px 0px;
 
   @include media-w($smx) {
     padding: 7px 0px 147px 0px;
@@ -26,8 +26,12 @@
   &__img {
     margin: 0px 191px 0px 26px;
 
+    @include media-w($sm) {
+      margin: -46px 191px 0px 26px;
+    }
+
     @include media-w($smx) {
-      margin: 34px 0px 0px -9px;
+      margin: -85px 0px 0px 0px;
       width: 425px;
       height: 364px;
     }
@@ -57,6 +61,8 @@
     margin-bottom: 54px;
     font-size: 24px;
     line-height: 1;
+    letter-spacing: 0.01em;
+    @include overflow($row);
 
     @include media-w($smx) {
       font-size: 26px;
@@ -69,9 +75,11 @@
     line-height: 1.5;
     margin-bottom: 23px;
     transition: margin 0.7s;
+    @include overflow($row-4);
 
     @include media-w($smx) {
       margin-bottom: 19px;
+      @include overflow($row-7);
     }
 
     &--hidden {
@@ -188,7 +196,7 @@
   }
 
   &__application-content {
-    margin: 38px 0px 0px 161px;
+    margin: 43px 0px 0px 161px;
 
     @include media-w($sxla) {
       margin: 0px 0px 0px 0px;
@@ -214,10 +222,11 @@
       position: absolute;
       width: 1615px;
       height: 1708px;
-      top: -620px;
-      left: -612px;
+      top: -617px;
+      left: -614px;
       background-image: url(../images/token/aplication/aplication-img.png);
       background-repeat: no-repeat;
+      background-size: cover;
 
       @include media-w($sxla) {
         height: 1708px;
@@ -241,14 +250,14 @@
       transform: translateX(-50%);
       background-image: url(../images/token/aplication/aplication-img-mob.png);
       background-repeat: no-repeat;
+      background-size: cover;
       display: none;
 
       @include media-w($smz) {
         display: block;
         top: -846px;
-        left: 42%;
+        left: 52%;
       }
-
     }
   }
 
@@ -301,6 +310,7 @@
     line-height: 1;
     text-shadow: 0px 14px 44px rgba(220, 152, 57, 0.6);
     margin-bottom: 60px;
+    @include overflow($row);
 
     @include media-w($sxla) {
       font-size: 26px;
@@ -342,6 +352,7 @@
     padding-left: 46px;
     @extend %Montserrat-700;
     margin-bottom: 30px;
+    @include overflow($row-2);
 
     @include media-w($sxla) {
       max-width: 100%;

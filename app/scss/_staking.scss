@@ -1,5 +1,4 @@
 .staking {
-
   @include media-w($smm) {
     margin-top: -144px;
   }
@@ -18,7 +17,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 771px;
-    margin-bottom: 62px;
+    margin-bottom: 60px;
 
     @include media-w($smm) {
       max-width: 358px;
@@ -31,6 +30,7 @@
     font-size: 34px;
     line-height: 1.2;
     color: $accent;
+    @include overflow($row);
 
     @include media-w($mdb) {
       max-width: 192px;
@@ -44,10 +44,11 @@
     display: block;
     color: rgba(180, 242, 153);
     opacity: 0.5;
-    padding: 10px 31px 10px 0px;
+    padding: 12px 31px 10px 0px;
     @extend %Montserrat-700;
     font-size: 24px;
     transition: 0.5s;
+    @include overflow($row);
 
     @include media-w($mdb) {
       max-width: 132px;
@@ -85,8 +86,8 @@
       position: absolute;
       width: 7px;
       height: 7px;
-      right: 14px;
-      top: 50%;
+      right: 10px;
+      top: 55%;
       transform: translateY(-50%);
       background-image: url(../images/staking/polygon.png);
       @extend %bg-center-cover;
@@ -96,7 +97,7 @@
 
   &__acceleration {
     margin: 0px 0px 0px 58px;
-    max-width: 146px;
+    max-width: 155px;
     @extend %Montserrat-600;
     font-size: 12px;
     text-transform: uppercase;
@@ -112,6 +113,7 @@
     color: $yellow-dark;
     padding: 0px 0px 0px 30px;
     margin-bottom: 14px;
+    @include overflow($row);
 
     &::before {
       content: '';
@@ -132,6 +134,7 @@
     color: $accent-light;
     padding: 0px 0px 0px 30px;
     margin-bottom: 15px;
+    @include overflow($row);
 
     &::before {
       content: '';
@@ -149,7 +152,7 @@
     max-width: 940px;
     display: flex;
     align-items: flex-end;
-    margin: 0px 0px -15px 60px;
+    margin: 0px 0px 16px 60px;
   }
 
   &__item {
@@ -299,7 +302,7 @@
     transition: margin 0.7s;
 
     &--one {
-      margin-bottom: 25px;
+      margin-bottom: 26px;
     }
 
     &--two {
@@ -322,7 +325,7 @@
   }
 
   .slick-slider .slick-list {
-    padding-top: 142px;
+    padding-top: 144px;
     margin-top: -86px;
   }
 
