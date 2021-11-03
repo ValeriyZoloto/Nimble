@@ -173,6 +173,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         color: $white;
+        @include overflow($row);
       }
     }
 
@@ -216,6 +217,7 @@
     position: absolute;
     top: 73px;
     right: 31px;
+    @include overflow($row);
 
     @include media-w($xs) {
       font-size: 12px;

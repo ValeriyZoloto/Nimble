@@ -102,6 +102,7 @@
     font-size: 14px;
     line-height: 2.28;
     text-align: center;
+    @include overflow($row);
   }
 
   &__span--airdrop {
@@ -164,6 +165,7 @@
     margin: 0px 57px 8px 76px;
     font-size: 16px;
     line-height: 1.44;
+    @include overflow($row);
 
     @include media-w($xxs) {
       margin: 0px 57px 8px 98px;
@@ -176,6 +178,7 @@
     @extend %Montserrat-800;
     font-size: 34px;
     line-height: 1.2;
+    @include overflow($row);
 
     @include media-w($xxs) {
       font-size: 24px;
@@ -194,6 +197,7 @@
   &__title {
     margin: 0px 0px 62px -21px;
     letter-spacing: 0.01em;
+    @include overflow($row);
 
     @include media-w($xl) {
       position: absolute;
@@ -202,6 +206,7 @@
       max-width: 234px;
       font-size: 26px;
       line-height: 1.19;
+      @include overflow($row-3);
     }
 
     @include media-w($smm) {
@@ -246,6 +251,7 @@
   &__symbol-item {
     position: relative;
     padding-left: 65px;
+    @include overflow($row);
 
     @include media-w($xs) {
       padding-left: 48px;
@@ -288,6 +294,10 @@
     }
   }
 
+  &__abbreviation-item {
+    @include overflow($row);
+  }
+
   &__bottom {
     position: relative;
     padding: 167px 0px 0px 0px;
@@ -316,6 +326,7 @@
     color: $accent;
     margin-bottom: -2px;
     margin-left: -75px;
+    @include overflow($row);
 
     @include media-w($xl) {
       margin-left: 0px;
@@ -486,6 +497,7 @@
     line-height: 1.44;
     text-transform: uppercase;
     color: $white;
+    @include overflow($row);
   }
 
   &__slider-price {
@@ -500,6 +512,7 @@
     background: linear-gradient(105.56deg, #E2F685 18.43%, #8AF9AD 89.58%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include overflow($row);
 
     &::before {
       content: '';
@@ -522,6 +535,7 @@
     font-size: 16px;
     line-height: 2.75;
     color: #5DA271;
+    @include overflow($row);
   }
 
   .slick-prev {
@@ -686,6 +700,7 @@
     line-height: 1.44;
     text-transform: uppercase;
     color: $hover-span;
+    @include overflow($row);
   }
 
   &__conditions-subtitle {
@@ -695,6 +710,7 @@
     line-height: 1.91;
     color: #a2dc89;
     margin: 0px auto 0px 0px;
+    @include overflow($row);
   }
 
   &__conditions-text {
@@ -702,6 +718,7 @@
     font-size: 14px;
     line-height: 1.64;
     margin-bottom: 16px;
+    @include overflow($row-3);
 
     @include media-w($xxsl) {
       font-size: 12px;

@@ -41,6 +41,8 @@
     }
 
     @include media-w($xs) {
+      position: absolute;
+      left: 5%;
       width: 306px;
       height: 219px;
     }
@@ -324,6 +326,10 @@
 
     @include media-w($xss) {
       margin-left: 0;
+    }
+
+    @include media-w($xs) {
+      margin-top: 90px;
     }
   }
 

@@ -36,6 +36,12 @@
       max-width: 192px;
       font-size: 26px;
       line-height: 32px;
+      @include overflow($row-2);
+    }
+
+    @include media-w($xxs) {
+      @include overflow($row-3);
+      font-size: 20px;
     }
   }
 
@@ -54,10 +60,15 @@
       max-width: 132px;
       font-size: 20px;
       line-height: 22px;
+      @include overflow($row-2);
     }
 
     @include media-w($smm) {
       margin: 2px 2px 0px 0px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 18px;
     }
 
     &:focus {
@@ -300,6 +311,15 @@
     line-height: 1.5;
     color: $gray;
     transition: margin 0.7s;
+    @include overflow($row-3);
+
+    @include media-w($sms) {
+      @include overflow($row-5);
+    }
+
+    @include media-w($xxs) {
+      @include overflow($row-6);
+    }
 
     &--one {
       margin-bottom: 26px;
@@ -315,7 +335,7 @@
 
     &--hidden {
       @include media-w($sxla) {
-        margin-left: -2004px;
+        margin-left: -7004px;
       }
     }
 

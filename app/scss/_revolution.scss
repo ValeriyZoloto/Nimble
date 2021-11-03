@@ -92,7 +92,11 @@
 
     @include media-w($sms) {
       margin: -74px 0px 109px 0px;
-      z-index: -1;
+      z-index: 1;
+    }
+
+    @include media-w($xss) {
+      margin: 71px 0px 109px 0px;
     }
   }
 
@@ -307,26 +311,35 @@
         right: -27px;
         left: -74px;
         bottom: -14px;
-        height: 327px;
-        width: 400px;
+        height: 405px;
+        width: 500px;
+      }
+
+      @include media-w($smx) {
+        top: -29px;
+        right: -27px;
+        left: -74px;
+        bottom: -14px;
+        height: 405px;
+        width: 467px;
       }
 
       @include media-w($smz) {
         height: 327px;
         width: 400px;
-        top: -45px;
+        top: -8px;
         right: -15px;
-        left: -72px;
+        left: -64px;
         bottom: -61px;
       }
 
       @include media-w($sms) {
         background-image: url(../images/revolution/card-border-hover1.png);
-        width: 325px;
-        height: 303px;
-        top: -45px;
+        width: 385px;
+        height: 328px;
+        top: -5px;
         right: 0px;
-        left: -43px;
+        left: -41px;
         bottom: -81px;
       }
     }

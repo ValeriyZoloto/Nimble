@@ -96,6 +96,7 @@
     line-height: 1.22;
     margin-bottom: 72px;
     padding-left: 81px;
+    @include overflow($row);
 
     @include media-w($xxs) {
       font-size: 38px;
@@ -154,6 +155,7 @@
     transition: 0.5s;
 
     &:hover {
+      width: 319px !important;
       margin-top: -44px;
       border-radius: 20px;
       box-shadow: 20px 17px 20px 0px $accent;
@@ -218,6 +220,7 @@
     background: linear-gradient(135deg, #00FFAA 0%, #4579F5 53.01%, #9C42F5 99.83%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include overflow($row-2);
 
 
     &--one {
@@ -401,6 +404,7 @@
     font-size: 34px;
     line-height: 1.2;
     color: $accent;
+    @include overflow($row);
 
     @include media-w($mdb) {
       font-size: 24px;
@@ -429,6 +433,7 @@
     line-height: 1.2;
     text-decoration-line: underline;
     color: $accent;
+    @include overflow($row);
 
     @include media-w($mdb) {
       font-size: 24px;
